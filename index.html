@@ -17,7 +17,7 @@ Dan-Ha Le, Anaya Sayani, Zaina Saleem, Miriam Rairick-->
     <p>This application help you visualize important time-marks within your writing process</p>
     <br><br>
 
-    <!--Input-->
+    <!--Getting input-->
     <form>
         <!--Paper's name-->
         <label for="paperName"> Give your paper a name!</label>
@@ -40,31 +40,34 @@ Dan-Ha Le, Anaya Sayani, Zaina Saleem, Miriam Rairick-->
         <input type="number" name="paperPace" id="paperPace">
         <br><br>
         <!--Paper's section-->
+        <label>Check the sections you still need to write:</label><br>
+        <input type="checkbox" id="section1" name="section1" value="abstract">
+            <label for="section1"> Abstract </label><br>     
+        <input type="checkbox" id="section1" name="section1" value="intro">
+            <label for="section1"> Introduction </label><br>
+        <input type="checkbox" id="section2" name="section2" value="litreview">
+            <label for="section2"> Literature Review </label><br>
+        <input type="checkbox" id="section3" name="section3" value="case">
+            <label for="section3"> Case Study</label><br>
+        <input type="checkbox" id="section4" name="section4" value="analysis">
+            <label for="section4"> Analysis</label><br>
+        <input type="checkbox" id="section5" name="section5" value="methodology"
+            <label for="section5"> Methodology</label><br>
+        <input type="checkbox" id="section5" name="section5" value="conclusion">
+            <label for="section5"> Conclusion</label><br><br>
 
-        
-
-
-        <!--(Potentially add in) Multiple sections for the paper-->
-        <!--
-        <label for="paperAlgo">How would you like to execute this paper?</label>
-        <select name="algo" id="algo">
-            <option value="abstract">Abstract</option>
-            <option value="intro">Introduction</option>
-            <option value="litreview">Literature Review</option>
-            <option value="case">Case Studies</option>
-            <option value="analysis">Analysis</option>
-            <option value="methodology">Methodology</option>
-            <option value="conclusion">Conclusion</option>
-        </select>
-            -->
+        <!--Paper's work-->
+        <label>How would you like to complete this essay?</label><br>
+        <input type="radio" id="greedy" name="greedy" value="greedy">
+            <label for="greedy"> As soon as possible </label>
+        <br><br>
 
     </form>
     <!--Button-->
-    <p>This application currently uses a Greedy Assignment algorithm, which plans for the paper to be completed as soon as possible!</p>
+
     <button onclick="makeSchedule()">Make my schedule!</button>
 
     <!--Output-->
-
 
     <script src = "script.js"></script>
 </body>
