@@ -2,11 +2,15 @@
 This is the Style Sheet for ScheduPaper (all CSS goes here)
 Dan-Ha Le, Ananya Sayani, Zaina Saleem, Miriam Rairick
 */
+
+div {
+    padding: 25px 50px 75px;
+}
 body {
-    background-color: peachpuff;
+    background-color: whitesmoke;
 }
 h1 {
-    background-color: aquamarine;
+    background-color: whitesmoke;
     max-width: 600px;
     margin: auto;
     text-align: center;
@@ -42,3 +46,17 @@ button {
     font-family: palatino;
     font-size: 120%;
 }
+
+ .loader {
+    border: 16px solid purple;
+    border-top: 16px solid blue;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+ }
+
+ @keyframes spin {
+    0% {transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+ }
