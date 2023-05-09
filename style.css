@@ -1,0 +1,44 @@
+/*
+This is the Style Sheet for ScheduPaper (all CSS goes here)
+Dan-Ha Le, Ananya Sayani, Zaina Saleem, Miriam Rairick
+*/
+body {
+    background-color: peachpuff;
+}
+h1 {
+    background-color: aquamarine;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: purple;
+    font-family: verdana;
+    font-size: 300%;
+    margin-bottom: 100px;
+    border: 2px solid purple;
+}
+
+p {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: black;
+    font-family: courier;
+    font-size: 160%;
+}
+
+form {
+    max-width: 600px;
+    margin-right: 200px;
+    margin-left: 100px;
+    color: black;
+    font-family: palatino;
+    font-size: 120%;
+}
+button {
+    max-width: 600px;
+    margin-right: 100px;
+    margin-left: 100px;
+    color: black;
+    font-family: palatino;
+    font-size: 120%;
+}
