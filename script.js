@@ -66,7 +66,7 @@ function checkBoxSection(hours) {
 // This function creates a schedule when the user clicks on the button
 function makeSchedule() {
     // Possibility: Maybe when the user click on the link we could have the results be displayed on a different HTML page?
-
+    document.getElementByID("error") = "Test";
     // Getting information from the form
     let paperName = document.querySelector("#paperName");
 
