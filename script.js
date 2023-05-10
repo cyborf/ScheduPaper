@@ -5,8 +5,9 @@
 */
 
 // Global variables:
-var myEssay = newArray(6);
+var myEssay = newArray(7);
 var error = false;
+var changed = false;
 
 // This function returns a list of sections and the time needed to complete them.
 function checkBoxSection(hours) {
@@ -15,7 +16,7 @@ function checkBoxSection(hours) {
     // A list of variables correspond to the checkboxes
     // var can be used globally, let is only scoped within this curly bracket
 
-    // Content of myEssay = [intro, litreview, case, analysis, methodology, conclusion]
+    // Content of myEssay = [intro, litreview, case, analysis, methodology, conclusion, abstract]
     const intro = document.querySelector('#section2');
     const litreview = document.querySelector('#section3');
     const cases = document.querySelector('#section4');
@@ -55,12 +56,21 @@ function checkBoxSection(hours) {
     }
     else {
         // returns an error if no sections are picked.
+       error = true;
        return document.getElementById("error").innerHTML = "Please select at least one checkbox";
+
+    }
+
+    // Creating the myEssay array
+    for (let i = 0; i < 7; i++) {
+        if (typeof array[i] == 'undefined') array[i] = 0;
+        else array[i] = hours/count;
     }
     
-
     // check for undefined: typeof array[index] == 'undefined'
 }
+
+
 
 
 
@@ -82,9 +92,42 @@ function makeSchedule() {
     let totalHours = paperDailyHours.value * paperDays.value;
     let totalHoursRequired = Math.round(paperLength.value / paperPace.value);
 
+    // Throw an error if the user requires more time to finish the essay than the reported total hours available.
+    if (totalHoursRequired > totalHours) return document.getElementById("error").innerHTML = "Your essay can not be completed before its deadline";
+
     // Prepare myEssay;
     checkBoxSection(totalHours);
+    if (error == true) return;
         // If there was an error, stop operations.
+    //myEssay array prepared!
+
+    // Choosing algorithm:
+    let paperAlgorithm = document.getElementsByName('algo');
+    for (let i = 0; i < paperAlgorithm.length; i++) {
+        if (paperAlgorithm[i].checked) {
+            paperAlgorithm = paperAlgorithm[i].value;
+            break;
+        }
+    }
+    if (Array.isArray(paperAlgorithm) == true) {
+        // If the user has not selected any algorithm, then display error message, and stop operations.
+        document.getElementById("error").innerHTML = "Please select at least one category"
+        return;
+    }
+    // paperAlgorithm should represent the Algorithm that the user wants to use;
+
+    // Creating the array for schedule:
+    const mySchedule = new Array(paperDays.value);
+    for (let i=0; i< paperDays.value; i++) {
+        mySchedule[i] = paperDailyHours.value;
+    }
+    // mySchedule should be an array with paperDays index, each of which would have a value of paperDailyHours to represent time available
+    
+    // Now, call the appropriate algorith:
+    if (paperAlgoritm == 'greedy') GreedyAlgorithm(mySchedule, myEssay);
+    else document.getElementById("error").innerHTML = "Something went wrong."
+
+    
 
     // Output information here!
 }
