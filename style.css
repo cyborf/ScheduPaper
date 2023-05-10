@@ -10,18 +10,18 @@ div {
     padding: 25px 50px 75px;
 }
 body {
-    background-color: whitesmoke;
+    background-color: papayawhip;
 }
 h1 {
-    background-color: whitesmoke;
+    background-color: skyblue;
     max-width: 600px;
     margin: auto;
     text-align: center;
-    color: purple;
-    font-family: verdana;
+    color: midnightblue;
+    font-family: garamond;
     font-size: 300%;
     margin-bottom: 100px;
-    border: 2px solid purple;
+    border: 1px solid midnightblue;
 }
 
 p {
@@ -51,8 +51,8 @@ button {
 }
 
  .loader {
-    border: 16px solid purple;
-    border-top: 16px solid blue;
+    border: 16px solid midnightblue;
+    border-top: 16px solid black;
     border-radius: 50%;
     width: 120px;
     height: 120px;
