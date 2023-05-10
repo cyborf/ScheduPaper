@@ -46,6 +46,7 @@ function GreedyAlgorithm(essay, schedule){
         myResults.appendChild(li);
        
     })
+    document.getElementById('resultsHeader').innerHTML = "The calendar we've generated for you is..."
 
 
 

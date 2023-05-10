@@ -20,6 +20,18 @@ Dan-Ha Le, Ananya Sayani, Zaina Saleem, Miriam Rairick
     
 }
 
+#display {
+    background-color:cornsilk;
+    
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 #header {
     background-color:#7aa16c;
     padding-left: 10px;
