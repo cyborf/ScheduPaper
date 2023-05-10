@@ -10,20 +10,20 @@ var error = false;
 
 // This function returns a list of sections and the time needed to complete them.
 function checkBoxSection(hours) {
-    document.getElementById("error").innerHTML = "Test"
+
     let count = 0
     // A list of variables correspond to the checkboxes
     // var can be used globally, let is only scoped within this curly bracket
 
     // Content of myEssay = [intro, litreview, case, analysis, methodology, conclusion]
-    var intro = document.getElementById("section2");
-    var litreview = document.getElementById("section3");
-    var cases = document.getElementById("section4");
-    var analysis = document.getElementById("section5");
-    var methodology = document.getElementById("section6");
-    var conclusion = document.getElementById("section7");
-    var abstract = document.getElementById("section1")
-
+    const intro = document.querySelector('#section2');
+    const litreview = document.querySelector('#section3');
+    const cases = document.querySelector('#section4');
+    const analysis = document.querySelector('#section5');
+    const methodology = document.querySelector('#section6');
+    const conclusion = document.querySelector('#section7');
+    const abstract = document.querySelector('#section1');
+    
     // Preliminarily check which sections have selected, returns an error if none.
     if (intro.checked == true) {
         myEssay[0] = 0;
@@ -55,19 +55,22 @@ function checkBoxSection(hours) {
     }
     else {
         // returns an error if no sections are picked.
-
-        return error.innerHTML = "Please pick at least one checkbox!"
+       return document.getElementById("error").innerHTML = "Please select at least one checkbox";
     }
     
 
     // check for undefined: typeof array[index] == 'undefined'
 }
 
+
+
 // This function creates a schedule when the user clicks on the button
 function makeSchedule() {
     // Possibility: Maybe when the user click on the link we could have the results be displayed on a different HTML page?
-    document.getElementByID("error") = "Test";
     // Getting information from the form
+
+    document.getElementById("error").innerHTML = "Please select at least one checkbox";
+    
     let paperName = document.querySelector("#paperName");
 
     let paperLength = document.querySelector("#paperLength");
@@ -80,19 +83,8 @@ function makeSchedule() {
     let totalHoursRequired = Math.round(paperLength.value / paperPace.value);
 
     // Prepare myEssay;
-    checkboxSection(totalHours);
+    checkBoxSection(totalHours);
         // If there was an error, stop operations.
-    if (error == true) return;
-
-
-
-    // Creating the array schedule:
-    let schedule = new Array();
-    for (let i = 0; i < paperDays.value; i++) {
-        schedule[i] = paperDailyHours.value;
-    }
-
-
 
     // Output information here!
 }
