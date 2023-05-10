@@ -1,4 +1,7 @@
+var mod = false;
+
 function GreedyAlgorithm(essay, schedule){
+    document.getElementById('error').innerHTML = "";
     // essay is the [1, 3, 1] ratio, schedule is [1, 1, 1,...]
 
     // The following code assigns each index of assign to an array that shows how many hours to each part:
@@ -50,10 +53,18 @@ function GreedyAlgorithm(essay, schedule){
 }
 
 function clean() {
+    // resetting the messages on the html page 
+    document.getElementById('error').innerHTML=" ";
+    document.getElementById('results').innerHTML=" ";
+    document.getElementById('resultsHeader').innerHTML=" ";
 
 }
 
 function makeSchedule() {
+    console.log(
+        'hi'
+    )
+    clean();
     let name = document.querySelector("#paperName");
     let length = document.querySelector("#paperLength");
     let days = document.querySelector("#paperDays");
@@ -62,7 +73,11 @@ function makeSchedule() {
 
     essayHours = length.value/pace.value;
     totalHours = days.value*dailyHours.value;
-    if (essayHours > totalHours) document.getElementById('error').innerHTML="This project is not feasible.";
+    if (!length.value > 0) return document.getElementById('error').innerHTML="Please input the essay's word count";
+    if (!days.value > 0) return document.getElementById('error').innerHTML="Please give the essay a duration";
+    if (!dailyHours.value > 0) return document.getElementById('error').innerHTML="Please give a daily limit";
+    if (!pace.value > 0) return document.getElementById('error').innerHTML="Please let us know your writing speed!";
+    if (essayHours > totalHours) return document.getElementById('error').innerHTML="This project is not feasible.";
 
     // Setting up the essay:
     myEssay =  [1, 3, 1];

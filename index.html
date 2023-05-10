@@ -8,77 +8,86 @@ Dan-Ha Le, Anaya Sayani, Zaina Saleem, Miriam Rairick-->
     <link type = text/css rel="stylesheet" href="style.css">
     <meta charset="utf-8" />
     <title></title>
+
 </head>
 <body>
+    <script src = "script.js"></script>
 
     <!-- Website Heading-->
-    <p><em>Welcome to...</em></p>
-    <h1>ScheduPaper</h1>
-    <p>This application help you visualize important time-marks within your writing process</p>
-    <br><br>
-
+    <div id="header">
+        
+        <p ><em>Welcome to...</em></p>
+        <p> ✦•······················•✦•······················•✦ </p>
+        <h1>ScheduPaper</h1>
+        <p> ✦•······················•✦•······················•✦ </p>
+    </div>
     <!--Getting input-->
-    <form>
-        <!--Paper's name-->
-        <label for="paperName"> Give your paper a name!</label>
-        <input type="text" name="paperName" id="paperName">
-        <br><br>
-        <!--Paper's word count-->
-        <label for="paperLength"> Paper's remaining word count: </label>
-        <input type="number" name="paperLength" id="paperLength">
-        <br><br>
-        <!--Paper's remaining day-->
-        <label for="paperDays"> Remaining days till due date:  </label>
-        <input type="number" name="paperDays" id="paperDays">
-        <br><br>
-        <!--Paper's daily hours-->
-        <label for="paperDailyHours"> Hours able to work on essay per day: </label>
-        <input type="number" name="paperDailyHours" id="paperDailyHours">
-        <br><br>
-        <!--Student's WPM-->
-        <label for="paperPace"> Your average word per hour: </label>
-        <input type="number" name="paperPace" id="paperPace">
-        <br><br>
+    <div id="fresh">
+        <p>This application helps you visualize important time-marks within your writing process</p>
+        <br>
+        <form>
+            <!--Paper's name-->
+            <label for="paperName"> Give your paper a name!</label>
+            <input type="text" name="paperName" id="paperName">
+            <br><br>
+            <!--Paper's word count-->
+            <label for="paperLength"> Paper's remaining word count: </label>
+            <input type="number" name="paperLength" id="paperLength">
+            <br><br>
+            <!--Paper's remaining day-->
+            <label for="paperDays"> Remaining days till due date:  </label>
+            <input type="number" name="paperDays" id="paperDays">
+            <br><br>
+            <!--Paper's daily hours-->
+            <label for="paperDailyHours"> Hours able to work on essay per day: </label>
+            <input type="number" name="paperDailyHours" id="paperDailyHours">
+            <br><br>
+            <!--Student's WPM-->
+            <label for="paperPace"> Your average word per hour: </label>
+            <input type="number" name="paperPace" id="paperPace">
+            <br><br>
 
-        <!--Paper's section-->
-        <!--To be added in future updates-->
-        <!-- <label>Check the sections you still need to write:</label><br>
-        <input type="checkbox" id="section1" name="section1" value="abstract">
-            <label for="section1"> Abstract </label><br>     
-        <input type="checkbox" id="section2" name="section2" value="intro">
-            <label for="section2"> Introduction </label><br>
-        <input type="checkbox" id="section3" name="section3" value="litreview">
-            <label for="section3"> Literature Review </label><br>
-        <input type="checkbox" id="section4" name="section4" value="case">
-            <label for="section4"> Case Study</label><br>
-        <input type="checkbox" id="section5" name="section5" value="analysis">
-            <label for="section5"> Analysis</label><br>
-        <input type="checkbox" id="section6" name="section6" value="methodology"
-            <label for="section6"> Methodology</label><br>
-        <input type="checkbox" id="section7" name="section7" value="conclusion">
-            <label for="section7"> Conclusion</label><br><br> -->
+            <!--Paper's section-->
+            <!--To be added in future updates-->
+            <!-- <label>Check the sections you still need to write:</label><br>
+            <input type="checkbox" id="section1" name="section1" value="abstract">
+                <label for="section1"> Abstract </label><br>     
+            <input type="checkbox" id="section2" name="section2" value="intro">
+                <label for="section2"> Introduction </label><br>
+            <input type="checkbox" id="section3" name="section3" value="litreview">
+                <label for="section3"> Literature Review </label><br>
+            <input type="checkbox" id="section4" name="section4" value="case">
+                <label for="section4"> Case Study</label><br>
+            <input type="checkbox" id="section5" name="section5" value="analysis">
+                <label for="section5"> Analysis</label><br>
+            <input type="checkbox" id="section6" name="section6" value="methodology"
+                <label for="section6"> Methodology</label><br>
+            <input type="checkbox" id="section7" name="section7" value="conclusion">
+                <label for="section7"> Conclusion</label><br><br> -->
 
-        <!--Paper's algorithm-->
-        <label>How would you like to complete this essay?</label><br>
-        <input type="radio" id="algo" name="algo" value="greedy">
-            <label for="greedy"> As soon as possible </label>
-        <br><br>
+            <!--Paper's algorithm-->
+            <label>How would you like to complete this essay?</label><br>
+            <input type="radio" id="algo" name="algo" value="greedy">
+                <label for="greedy"> As soon as possible </label>
+            <br><br>
 
-    </form>
-    <!--Button-->
 
-    <button onclick="makeSchedule()"> Make my schedule! </button>
+        </form>
+        <!--Button-->
+        <button onclick="makeSchedule()"> Make my schedule! </button>
 
-    <!--Output-->
+        
 
-    <!--Error messages-->
-    <p id="error"> </p>
-    <p id = "test"> </p>
-    <br><br><br><br><br>
+        <!--Output-->
 
-    <!--Display results-->
-    <ul id="results"></ul>
+        <!--Error messages-->
+        <p id="error"> </p>
+        <br><br><br><br><br>
 
-    <script src = "script.js"></script>
+        <!--Display results-->
+        <p id ="resultsHeader"></p>
+        <ul id="results"></ul>
+    </div>
+
 </body>
 </html>
