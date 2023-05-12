@@ -29,12 +29,17 @@ Output:
 </ul>
 
 ## Group Members
-<p> This web application is our final project for Oberlin College's CS241 Systems Programming course.
+<p> This web application is our final project for Oberlin College's CS241 Systems Programming course. Version update on May 12 was a collaborative effort between:
 <ul>
     <li> Dan-Ha Le '25 (@cyborf)
     <li> Ananya Sayani '25 (@ananyasayani)
     <li> Zaina Saleem '25 (@zainasaleem)
     <li> Miriam Rairick '25 (@mjrairick)
 
+</ul>
+<p> For the summer of 2023, we will be working on adding more functionalities for the web-tool. Our team will consist of:<p>
+    <ul>
+        <li> Dan-Ha Le '25 (@cyborf)
+        <li> Abby Lewin '25
 </ul>
 </p>
